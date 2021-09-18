@@ -64,13 +64,26 @@ header {
   color: #fff;
 }
 
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex; /* by default diplays 'flex-direction' in single row */
+  padding-left: 0;
+  list-style: none;
+}
+
 header nav ul li {
-  list-style-type: none;
+  diplay: flex;
+  padding-left: 0;
+  list-style-type: none; /* removes bullet points */
 }
 
 header nav ul li a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: none; /* removes underline from link*/
   padding: 0 20px 0 0;
 }
 
@@ -79,14 +92,42 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+.col {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 33px;
+}
+
+.second-column {
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+section {
+  padding: 18px;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
   font-weight: bold;
+  /* justify-content: flex-start; */
 }
 
 form select,
@@ -104,6 +145,12 @@ form button {
   width: 100%;
 }
 
+form > div {
+  /* what does 'form > div' mean??? */
+  display: flex;
+  justify-content: space-between;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +164,82 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+  }
+
+  form label {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  form > div {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  form button {
+    width: auto;
+    display: inline-flex;
+    justify-content: flex-end;
+    /* margin-left: 100px; */
+    /* font-size: small; */
+  }
+
+  .criteria {
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  #ideas .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    margin-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .column {
+    flex: 33.33%; /*could also use 1 (as in 1:1:1 ratio)??? */
+    margin: auto 0;
+    margin-left: 15px;
+    font-size: small;
+    align-items: center;
+  }
+
+  .area-single {
+    display: flex;
+    flex: 1;
+  }
+
+  .area-double {
+    display: flex;
+    flex: 2;
+  }
+
+  /* ------- ideas -------*/
+
+
+  .about-host-background h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+ 
+}
