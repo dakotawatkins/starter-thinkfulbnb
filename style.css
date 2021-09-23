@@ -133,7 +133,10 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  /* width: 110px; */
+  /* width: auto; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 form button {
@@ -164,7 +167,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media all and (min-width: 600px) {
   header {
     display: flex;
     justify-content: space-between;
