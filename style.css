@@ -175,7 +175,7 @@ footer p {
 /* -------  Media Query ------- */
 
 /* 600px looked good but i got downgraded for not having 480px requirement. */
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
   body {
     padding-right: 0px;
   }
@@ -197,6 +197,11 @@ footer p {
     display: flex;
     padding-right: 10px;
   }
+
+  /* form input {
+    width: 80px;
+    font-size: small;
+  } */
 
   form > div {
     display: inline-flex;
